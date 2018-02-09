@@ -1,5 +1,7 @@
 > Coding Interviews: Questions, Analysis and Solutions (1st Edition)
 
+争取用scala实现《剑指Offer：名企面试官精讲典型编程题（第1版）》上的程序题
+
 # Version
 - JDK 1.7
 - Scala 2.11.8
