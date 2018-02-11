@@ -13,7 +13,7 @@ object Test08 {
 
     var mid = low
     while (numbers(low) >= numbers(high)) {
-      if (high - low == 1) return numbers(high)
+      if (high - low == 1) return numbers(high) //只剩下2个，右侧更小
 
       /*二分查找*/
       mid = (low + high) / 2
@@ -21,7 +21,7 @@ object Test08 {
       /*corner case*/
       if (numbers(low) == numbers(mid) == numbers(high)) return numbers.slice(low, high).min
 
-      if (numbers(mid) >= numbers(low)) low = mid
+      if (numbers(low) < numbers(mid)) low = mid //45123，45623
       else high = mid
     }
 

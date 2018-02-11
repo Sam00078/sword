@@ -13,8 +13,8 @@ import scala.collection.mutable
 object Test07 {
 
   class MockQueue[T] {
-    private val stackIn = new mutable.Stack[T]()
-    private val stackOut = new mutable.Stack[T]()
+    private val stackIn = mutable.Stack[T]()
+    private val stackOut = mutable.Stack[T]()
 
     def append(t: T): Unit = {
       stackIn.push(t)
