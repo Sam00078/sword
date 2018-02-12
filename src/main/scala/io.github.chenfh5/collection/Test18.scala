@@ -38,6 +38,11 @@ object Test18 {
   def main(args: Array[String]): Unit = {
     val input = OwnConstant().treeRoot
     OwnUtils.printTree(input, TreeOrder.preOrder)
+    println()
+    OwnUtils.printTree(input, TreeOrder.inOrder)
+    println()
+    OwnUtils.printTree(input, TreeOrder.postOrder)
+    println()
 
     val subTree = TreeNode(2, null, null) //深度1
 
