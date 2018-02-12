@@ -13,7 +13,11 @@ class OwnConstant {
                   LinkNode(9, null)
                 ))))))))
 
-
+  /**
+    * preOrder:1 2 4 9 5 10 3 6 12 7 15
+    * inOrder:4 9 2 10 5 1 12 6 3 7 15
+    * postOrder:9 4 10 5 2 12 6 15 7 3 1
+    */
   val treeRoot: TreeNode = {
     val root = TreeNode(1, null, null) //深度1
 
@@ -32,7 +36,6 @@ class OwnConstant {
 
     root
   }
-
 
 }
 
