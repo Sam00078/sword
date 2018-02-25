@@ -19,10 +19,10 @@ object Test08 {
       mid = (low + high) / 2
 
       /*corner case*/
-      if (numbers(low) == numbers(mid) == numbers(high)) return numbers.slice(low, high).min
+      if (numbers(low) == numbers(mid) && numbers(mid) == numbers(high)) return numbers.slice(low, high).min
 
-      if (numbers(low) < numbers(mid)) low = mid //45123，45623
-      else high = mid
+      if (numbers(low) < numbers(mid)) low = mid //45623
+      else high = mid //56234
     }
 
     numbers(mid)

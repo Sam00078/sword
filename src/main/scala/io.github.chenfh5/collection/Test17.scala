@@ -12,7 +12,6 @@ object Test17 {
     if (head1 == null) return head2
     if (head2 == null) return head1
 
-
     var head1Var = head1
     var head2Var = head2
     val newHead = LinkNode(0, null) //创建新的头节点，然后迭代其next

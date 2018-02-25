@@ -6,7 +6,7 @@ import _root_.io.github.chenfh5.common.{OwnConstant, LinkNode}
 
 
 /**
-  * 输入个链表的头结点，从尾到头反过来打印出每个结点的值。
+  * 输入一个链表的头结点，从尾到头反过来打印出每个结点的值。
   */
 object Test05 {
 

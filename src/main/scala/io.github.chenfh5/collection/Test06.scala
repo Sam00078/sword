@@ -3,6 +3,9 @@ package io.github.chenfh5.collection
 import io.github.chenfh5.common.{OwnUtils, TreeNode, TreeOrder}
 
 
+/**
+  * 根据先序和中序遍历,还原一个二叉树
+  */
 object Test06 {
 
 
@@ -28,8 +31,10 @@ object Test06 {
 
     //left right sub-tree 中序分
     val leftTreeSize = iIndex - iStart
-    newRoot.left = reConstruct(preOrderArr, pStart + 1, pStart + leftTreeSize, inOrderArr, iStart, iIndex - 1) //首位的的root不要
-    newRoot.right = reConstruct(preOrderArr, pStart + leftTreeSize + 1, pEnd, inOrderArr, iIndex + 1, iEnd) //中间的root不要
+    newRoot.left = reConstruct(preOrderArr, pStart + 1, pStart + leftTreeSize,
+      inOrderArr, iStart, iIndex - 1) //首位的的root不要
+    newRoot.right = reConstruct(preOrderArr, pStart + leftTreeSize + 1, pEnd,
+      inOrderArr, iIndex + 1, iEnd) //中间的root不要
 
     newRoot
   }

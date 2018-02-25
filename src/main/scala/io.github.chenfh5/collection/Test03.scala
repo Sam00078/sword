@@ -9,7 +9,7 @@ object Test03 {
   /**
     * 规律：x>number右移，x<number下移
     */
-  def find(matrix: Array[Array[Int]], number: Int): Boolean = {
+  def find(matrix: Array[Array[Int]], targetNumber: Int): Boolean = {
     if (matrix == null || matrix.length < 1 || matrix.head.length < 1) return false
 
     val rowSize = matrix.length
@@ -18,11 +18,11 @@ object Test03 {
     var startRow = 0
     var startCol = colSize - 1
 
-    if (number < matrix(startRow)(startCol) || number > matrix(rowSize - 1)(colSize - 1)) return false
+    if (targetNumber < matrix(startRow)(startCol) || targetNumber > matrix(rowSize - 1)(colSize - 1)) return false
 
     while (startRow >= 0 && startRow < rowSize && startCol >= 0 && startCol < colSize) {
-      if (matrix(startRow)(startCol) == number) return true
-      else if (matrix(startRow)(startCol) > number) startCol -= 1
+      if (matrix(startRow)(startCol) == targetNumber) return true
+      else if (matrix(startRow)(startCol) > targetNumber) startCol -= 1
       else startRow += 1
     }
     false
