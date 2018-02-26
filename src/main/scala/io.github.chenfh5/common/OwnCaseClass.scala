@@ -1,14 +1,14 @@
 package io.github.chenfh5.common
 
 case class LinkNode(
-  var value: Int,
-  var next: LinkNode
+  var value: Int = -99,
+  var next: LinkNode = null
 )
 
 case class TreeNode(
-  var value: Int,
-  var left: TreeNode,
-  var right: TreeNode
+  var value: Int = -99,
+  var left: TreeNode = null,
+  var right: TreeNode = null
 )
 
 object TreeOrder extends Enumeration {
