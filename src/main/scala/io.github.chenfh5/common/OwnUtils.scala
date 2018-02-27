@@ -8,6 +8,7 @@ object OwnUtils {
   //递归打印二叉树
   def printTree(root: TreeNode, order: TreeOrder.Order): Unit = {
     if (root == null) return
+
     if (order == TreeOrder.preOrder) printTreeNode(root)
     printTree(root.left, order)
     if (order == TreeOrder.inOrder) printTreeNode(root)
