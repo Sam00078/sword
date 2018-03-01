@@ -11,7 +11,6 @@ object Test02 {
     instance
   }
 
-
   def main(args: Array[String]) {
     assert(Test02.getInstance == Test02.getInstance())
   }
