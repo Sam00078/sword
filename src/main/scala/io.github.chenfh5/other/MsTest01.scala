@@ -25,7 +25,7 @@ object MsTest01 {
         else if (curLink.value > firstVal) endThisLoop = true //大于firstVal，就直接跳过之后的所有。继续查找下一轮firstVal
         else {
           while (curLink != null && curLink.value < firstVal) curLink = curLink.next //小于firstVal，则继续右移
-          if (curLink == null) -1
+          if (curLink == null) return -1
           if (curLink.value == firstVal) hitCnt += 1 //等于firstVal，则计数并continue
         }
       } //end for loop
