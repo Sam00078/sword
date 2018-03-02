@@ -11,6 +11,7 @@ object Test36 {
     * @see http://blog.csdn.net/u011080472/article/details/51262097
     *      http://wiki.jikexueyuan.com/project/for-offer/question-thirty-six.html
     */
+  //TODO
   def getPairs(arr: Array[Int]): Int = {
     if (arr == null || arr.length < 1) throw new IllegalArgumentException("invalid input")
 
