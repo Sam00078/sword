@@ -41,6 +41,8 @@ class TestCase {
     OwnUtils.printTree(input, TreeOrder.postOrder)
     println()
     OwnUtils.printTreeNotInRec(input, TreeOrder.postOrder)
+
+    LOG.info("this is the printTreeNodeTest func")
   }
 
 }
