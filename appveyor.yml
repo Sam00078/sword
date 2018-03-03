@@ -15,3 +15,12 @@ test_script:
 
 cache:
   - C:\Users\appveyor\.m2
+
+notifications:
+  - provider: Email
+    to:
+      - chenfh5@qq.com
+      - chenfh5@qq.com
+    on_build_success: true
+    on_build_failure: true
+    on_build_status_changed: true
