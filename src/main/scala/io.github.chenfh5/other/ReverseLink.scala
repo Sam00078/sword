@@ -4,7 +4,7 @@ package io.github.chenfh5.other
 import io.github.chenfh5.common.{LinkNode, OwnConstant}
 
 
-object LinkReverse {
+object ReverseLink {
 
   /**
     * @see http://blog.csdn.net/guyuealian/article/details/51119499
