@@ -1,7 +1,5 @@
 version: "{build}-{branch}"
 
-version: '{build}'
-
 branches:
   only:
     - master
@@ -11,6 +9,7 @@ init:
 
 build_script:
   - mvn clean package --batch-mode -DskipTest
+
 test_script:
   - mvn clean verify --batch-mode
 
