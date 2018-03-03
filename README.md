@@ -1,3 +1,9 @@
+SWORD
+==============
+
+[![Build status](https://ci.appveyor.com/api/projects/status/1hy8ceov3v303gbl?svg=true)](https://ci.appveyor.com/project/chenfh5/sword)
+
+
 > Coding Interviews: Questions, Analysis and Solutions (1st Edition)
 
 争取用`Scala`实现《剑指Offer：名企面试官精讲典型编程题（第1版）》上的程序题
