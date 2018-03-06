@@ -8,7 +8,7 @@ object NQueen {
   /**
     * @see http://blog.csdn.net/tianyaleixiaowu/article/details/50945054
     */
-  def initial(queenNum: Int = 8) = {
+  def initial(queenNum: Int = 8): Unit = {
     this.queenColNum = queenNum //一共有多少个皇后（此时设置为8皇后在8X8棋盘，可以修改此值来设置N皇后问题）
     result = new Array[Int](queenNum)
     check(0)

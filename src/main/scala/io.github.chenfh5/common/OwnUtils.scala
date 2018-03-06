@@ -6,7 +6,7 @@ import scala.collection.mutable
 object OwnUtils {
 
   //递归打印二叉树
-  def printTree(root: TreeNode, order: TreeOrder.Order): Unit = {
+  def printTree(root: TreeNode, order: TreeOrder.Order = TreeOrder.preOrder): Unit = {
     if (root == null) return
 
     if (order == TreeOrder.preOrder) printTreeNode(root)
@@ -20,7 +20,7 @@ object OwnUtils {
     * @see http://blog.csdn.net/jssongwei/article/details/50790253
     *      非递归打印二叉树
     */
-  def printTreeNotInRec(root: TreeNode, order: TreeOrder.Order): Unit = {
+  def printTreeNotInRec(root: TreeNode, order: TreeOrder.Order = TreeOrder.preOrder): Unit = {
     if (root == null) return
     if (order == TreeOrder.preOrder) preOrder(root)
     if (order == TreeOrder.inOrder) inOrder(root)
