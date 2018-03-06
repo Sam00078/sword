@@ -18,6 +18,7 @@ object Test45 {
     * @param k 从第k个人开始报数
     */
   def lastRemaining(n: Int = 100, m: Int = 11, k: Int = 1): Int = {
+    if (n < 1 || m < 1 || k < 1) throw new IllegalArgumentException("invalid input")
     val arr = ListBuffer(1 to n: _*)
     var dropIndex = k - 1 //表示退出的那个人在arr集合中的下标(0,1,2,..,n-1)
 
