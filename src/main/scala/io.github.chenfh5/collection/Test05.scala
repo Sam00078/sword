@@ -10,7 +10,7 @@ import _root_.io.github.chenfh5.common.{OwnConstant, LinkNode}
   */
 object Test05 {
 
-  def reverseWithStack(root: LinkNode) = {
+  def reverseWithStack(root: LinkNode): mutable.Queue[Int] = {
     val stack = new mutable.Stack[LinkNode]()
     var oldRoot = root
     /*add*/

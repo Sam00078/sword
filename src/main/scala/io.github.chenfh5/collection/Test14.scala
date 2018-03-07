@@ -26,7 +26,7 @@ object Test14 {
   }
 
   def condition(number: Int): Boolean = {
-    number % 2 == 1 //奇数在左
+    math.abs(number) % 2 == 1 //奇数在左
     //    number < 0 //负数在左
   }
 

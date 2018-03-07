@@ -9,25 +9,16 @@ object Test12 {
   //将问题转换成数字排列
   //n位，每位都是0~9，将以0开头的排除掉
   def printMaxDigits(number: Int): Unit = {
-
     if (number <= 0) throw new RuntimeException("invalid number")
 
-    var arr = new Array[Char](number)
+    val arr = new Array[Char](number)
     for (i <- 0 until 10) { //0~9
       arr(0) = ('0' + i).asInstanceOf[Char] //index=0
       printMaxDigitsRec(arr, number, 0)
     }
   }
 
-  private def printNum(arr: Array[Char]): Unit = {
-    var index = 0
-    while (index < arr.length && arr(index) == '0') index = index + 1
-
-    for (i <- index until arr.length) {
-      print(arr(i))
-    }
-  }
-
+  //回退机制，00[0~9], 01[0~9], 02[0~9] -> [0~9][0~9][0~9]，递归假设n-1成立，那么n是成立的。
   private def printMaxDigitsRec(arr: Array[Char], number: Int, index: Int): Unit = {
     if (number == index + 1) { //刚好全排列充满整个arr
       printNum(arr) //打印满载arr的首个非零char
@@ -37,6 +28,15 @@ object Test12 {
         arr(index + 1) = ('0' + i).asInstanceOf[Char]
         printMaxDigitsRec(arr, number, index + 1)
       }
+    }
+  }
+
+  private def printNum(arr: Array[Char]): Unit = {
+    var index = 0
+    while (index < arr.length && arr(index) == '0') index = index + 1
+
+    for (i <- index until arr.length) {
+      print(arr(i))
     }
   }
 

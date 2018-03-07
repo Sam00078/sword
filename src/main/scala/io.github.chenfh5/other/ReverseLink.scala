@@ -16,31 +16,29 @@ object ReverseLink {
     var curNode = head.next
 
     while (curNode != null) {
-      val nextNode = curNode.next //save the next node
+      val nextTemp = curNode.next //save the next node
       curNode.next = preNode //keyPoint: update the value of "next"
 
       //shift the pointers
       preNode = curNode
-      curNode = nextNode
+      curNode = nextTemp
     }
-    head.next = null //将原链表的头节点的next置为null。此为新链表的尾结点，即原链表的头结点
+    head.next = null //将原链表的头节点的next置为null。此为新链表的尾节点，即原链表的头节点
     preNode
   }
 
   /**
     * @see http://blog.csdn.net/guyuealian/article/details/51119499
     *      递归反转法：在反转当前节点之前先反转后续节点。
-    *      这样从头结点开始，层层深入直到尾结点才开始反转指针域的指向。
-    *      简单的说就是从尾结点开始，逆向反转各个结点的指针域指向。
+    *      这样从头节点开始，层层深入直到尾节点才开始反转指针域的指向。
+    *      简单的说就是从尾节点开始，逆向反转各个节点的指针域指向。
     */
   def reverseInRecur(head: LinkNode): LinkNode = {
-    if (head == null || head.next == null) return head //若为空链或当前是尾结点，则直接还回
-    val nextNode = head.next //取出下一个节点
-    head.next = null //next置空
-    val reverseNode = reverseInRecur(nextNode) //反转下一个节点
-
-    nextNode.next = head //next指向前节点head
-    reverseNode //reverseNode的值没有改变，为原链表的最后一个node
+    if (head == null || head.next == null) return head //若为空链或当前是尾节点，则直接还回
+    val p = reverseInRecur(head.next) //反转下一个节点
+    head.next.next = head //next往回指，当前节点的指针域指向前一节点,head是前一节点
+    head.next = null //前一节点的指针域令为null
+    p //reverseNode的值没有改变，为原链表的最后一个node
   }
 
   def main(args: Array[String]): Unit = {

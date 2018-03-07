@@ -6,9 +6,12 @@ package io.github.chenfh5.collection
   */
 object Test28 {
 
-
   /**
     * @see http://blog.csdn.net/bitcarmanlee/article/details/51558272
+    *      http://blog.csdn.net/xiazdong/article/details/7986015
+    *      http://www.ayqy.net/blog/%E5%85%A8%E6%8E%92%E5%88%97%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90%EF%BC%88%E5%8E%9F%E5%88%9B%E6%96%B9%E6%B3%95%E4%B8%80%E8%88%AC%E6%96%B9%E6%B3%95%E5%AD%97%E5%85%B8%E5%BA%8F%E6%B3%95%EF%BC%89/
+    *      定义一个全局数组，把100个数放进去，然后写一个迭代函数，从数组里依次取一个数出来然后进入下一个迭代并继续从剩下的数里取一个出来，直到数组里的数被取空，输出结果；然后回到上一层迭代继续取没有取过的数。
+    *
     */
   def permutation(arr: Array[Char], beginIndex: Int, endIndex: Int): Unit = {
     if (arr == null || arr.length < 1) throw new RuntimeException("invalid input size")
@@ -17,16 +20,18 @@ object Test28 {
     else {
       for (i <- beginIndex to endIndex) {
         swap(arr, i, beginIndex) //交换前缀，使其产生下一个前缀
-        permutation(arr, beginIndex + 1, endIndex)
+        permutation(arr, beginIndex + 1, endIndex) //先a,再b，再c，然后回退到b，bc交换，再回退到a，ab交换，
         swap(arr, beginIndex, i) //将前缀换回，继续做上一个前缀的排列
       }
     }
   }
 
   def swap(s: Array[Char], i: Int, j: Int): Unit = {
-    val tmp = s(i)
-    s(i) = s(j)
-    s(j) = tmp
+    if (i != j) {
+      val tmp = s(i)
+      s(i) = s(j)
+      s(j) = tmp
+    }
   }
 
   def main(args: Array[String]): Unit = {
