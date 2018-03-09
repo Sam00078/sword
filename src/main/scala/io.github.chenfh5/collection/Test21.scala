@@ -18,9 +18,7 @@ object Test21 {
 
     def pop(): T = {
       if (dataStack.isEmpty) throw new RuntimeException("this is an empty stack")
-
-      val topData = dataStack.top
-      dataStack.pop()
+      val topData = dataStack.pop()
 
       if (topData == min()) minStack.pop() //dataStack可能与minStack的size不一致
       topData
@@ -46,6 +44,7 @@ object Test21 {
     val ownStack = new OwnStack[Int]()
     ownStack.push(1)
     ownStack.push(2)
+    ownStack.push(3)
     ownStack.push(3)
     ownStack.push(4)
     ownStack.push(3)

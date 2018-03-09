@@ -16,7 +16,7 @@ object Test09 {
 
     for (i <- 3 to n) {
       current = pre + prePre
-      /*n往n+1滚，记录下来，不用每次重算之前的，备忘录算法*/
+      /*n往n+1滚动，记录下来，不用每次重算之前的，备忘录算法*/
       prePre = pre
       pre = current
     }

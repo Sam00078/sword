@@ -1,6 +1,6 @@
 package io.github.chenfh5.collection
 
-import io.github.chenfh5.common.{OwnConstant, LinkNode}
+import io.github.chenfh5.common.{LinkNode, OwnConstant}
 
 
 /**
@@ -17,10 +17,10 @@ object Test15 {
     * y
     * 2nd
     * x
-    * y
+    * ------y(k-1)
     * 3rd
-    * x
-    * y
+    * ----------x(target)
+    * ----------------y(last)
     * xy相差`lastN-1`,然后y与x同时向右移动直到y到达尾巴，此时x所指是所求
     */
   def findLastNPosition(head: LinkNode, lastN: Int): LinkNode = {
@@ -36,7 +36,7 @@ object Test15 {
 
     //xy同时移动
     while (y.next != null) {
-      x = x.next
+      x = x.next //target
       y = y.next
     }
     x

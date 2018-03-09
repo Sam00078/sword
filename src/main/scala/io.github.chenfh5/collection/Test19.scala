@@ -9,19 +9,17 @@ import io.github.chenfh5.common.{OwnConstant, OwnUtils, TreeNode, TreeOrder}
 object Test19 {
 
   def mirror(root: TreeNode): TreeNode = {
-    var rootVar = root
     if (root != null) {
       //swap
-      var temp = rootVar.left
-      rootVar.left = rootVar.right
-      rootVar.right = temp
+      val temp = root.left
+      root.left = root.right
+      root.right = temp
 
       //递归
-      mirror(rootVar.left)
-      mirror(rootVar.right)
+      mirror(root.left)
+      mirror(root.right)
     }
-
-    rootVar
+    root
   }
 
   def main(args: Array[String]): Unit = {
@@ -30,6 +28,5 @@ object Test19 {
     println()
     OwnUtils.printTree(mirror(input), TreeOrder.preOrder)
   }
-
 
 }

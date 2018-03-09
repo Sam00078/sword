@@ -18,27 +18,17 @@ import io.github.chenfh5.common.{LinkNode, OwnConstant}
 object Test16 {
 
   def reverseLink(head: LinkNode): LinkNode = {
-    var reverseHead = LinkNode(0, null)
+    var pre = head
+    var cur = head.next
+    while (cur != null) {
+      val nextTemp = cur.next
+      cur.next = pre
 
-    var curr = head
-    var prev = LinkNode(0, null)
-    var next = LinkNode(0, null)
-
-    var isFirstNode = true
-    while (curr != null) {
-      reverseHead = curr //记录当前结点
-
-      next = curr.next //先记录当前的下一个结点，以便待会的cur变化
-      //开始反转操作，当前结点的下一个结点指向前驱结点
-      if (isFirstNode) {
-        curr.next = null
-        isFirstNode = false
-      }
-      else curr.next = prev
-      prev = curr //整体右移一位
-      curr = next //整体右移一位
+      pre = cur
+      cur = nextTemp
     }
-    reverseHead
+    head.next = null
+    pre
   }
 
   def main(args: Array[String]): Unit = {

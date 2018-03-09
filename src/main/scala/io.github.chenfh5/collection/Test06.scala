@@ -26,13 +26,14 @@ object Test06 {
 
     if (iIndex > iEnd) throw new RuntimeException("Invalid input") //如果在整个中序遍历的数组中没有找到，说明输入的参数是不合法的，抛出异常
 
-    var newRoot = TreeNode(0, null, null)
+    val newRoot = TreeNode(0, null, null)
     newRoot.value = rootValue
 
     //left right sub-tree 中序分
     val leftTreeSize = iIndex - iStart
     newRoot.left = reConstruct(preOrderArr, pStart + 1, pStart + leftTreeSize,
       inOrderArr, iStart, iIndex - 1) //首位的的root不要
+
     newRoot.right = reConstruct(preOrderArr, pStart + leftTreeSize + 1, pEnd,
       inOrderArr, iIndex + 1, iEnd) //中间的root不要
 
