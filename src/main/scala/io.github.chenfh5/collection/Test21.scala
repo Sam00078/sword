@@ -30,9 +30,7 @@ object Test21 {
       dataStack.push(t)
       if (minStack.isEmpty) minStack.push(t)
       else if (t < minStack.top) minStack.push(t) //泛型比较；待入栈数据如果小于minStack的top，就将其入栈
-
     }
-
 
     def min(): T = {
       if (minStack.isEmpty) throw new RuntimeException("this is an empty stack")

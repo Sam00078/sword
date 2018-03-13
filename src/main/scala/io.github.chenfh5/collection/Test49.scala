@@ -24,7 +24,6 @@ object Test49 {
 
     res = if (head == '-') -res else res
     if (res > Int.MaxValue || res < Int.MinValue) 0 else res.toInt
-
   }
 
   def main(args: Array[String]): Unit = {

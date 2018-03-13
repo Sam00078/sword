@@ -1,7 +1,5 @@
 package io.github.chenfh5.collection
 
-import java.util.Collections
-
 import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 

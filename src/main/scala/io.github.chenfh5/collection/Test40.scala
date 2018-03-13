@@ -12,7 +12,7 @@ object Test40 {
     * @see http://wiki.jikexueyuan.com/project/for-offer/question-forty.html
     *      http://blog.csdn.net/ns_code/article/details/27649027
     *      异或运算的一个性质：任何一个数字异或它自己都等于0。
-    *      即如果从头到尾依次异或数组中的每一个数字，那么最终的结果就是那个只出现一次的数字，因为那些成对出现两次的数字全部在异或中抵消了。
+    *      即如果从头到尾依次异或数组中的每一个数字，那么最终的结果就是两个只出现一次的数字的异或结果，因为那些成对出现两次的数字全部在异或中抵消了。
     */
   def findNumbersAppearanceOnlyOnce(arr: Array[Int]): Set[Int] = {
     if (arr == null || arr.length < 2) throw new IllegalArgumentException("invalid input array")
@@ -35,7 +35,7 @@ object Test40 {
   private def findFirstBit1Pos(num: Int): Int = {
     var varNum = num
     var pos = 0
-    while ((varNum & 1) == 0 && pos < 32) {
+    while ((varNum & 1) == 0 && pos < 32) { //以1为界
       /**
         * @see https://www.jianshu.com/p/0236b51b903f
         *      >>> 是无符号右移，无论左操作数是正数还是负数，在高位都补"0"
@@ -49,7 +49,7 @@ object Test40 {
   private def isFirstBit1(num: Int, pos: Int) = {
     var varNum = num
     varNum >>>= pos
-    (varNum & 1) == 1
+    (varNum & 1) == 1 //以1为界
   }
 
   def main(args: Array[String]): Unit = {

@@ -20,13 +20,10 @@ object Test43 {
     if (diceNum < 1) return
     val result = Array.ofDim[Int](2, 6 * diceNum + 1) //构建两个数组，分别存储前一次和后一次的和出现的`次数`
 
-
     for (i <- 1 to 6) result(1)(i) = 1 //初始化第一个数组（仅有一个骰子的情况）
 
-    //第二个骰子到第n个骰子
-    for (k <- 2 to diceNum) {
-      //当骰子数为k，那么sum的范围为k到k*6
-      for (i <- k to 6 * k) {
+    for (k <- 2 to diceNum) { //第二个骰子到第n个骰子
+      for (i <- k to 6 * k) { //当骰子数为k，那么sum的范围为k到k*6
         for (j <- i - 6 until i) {
           //当前数字之和 = 前一次出现1的次数 + 前一次出现2的次数 + ... + 前一次出现6的次数
           if (j > 0) result(k % 2)(i) += result((k - 1) % 2)(j)

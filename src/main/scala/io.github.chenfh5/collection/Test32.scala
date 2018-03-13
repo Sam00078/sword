@@ -2,13 +2,13 @@ package io.github.chenfh5.collection
 
 /**
   * 输入一个整数n求从1到n这n个整数的十进制表示中1出现的次数
-  *
   */
 object Test32 {
 
   /**
-    * 累加1 到n 中每个整数1 出现的次数。我们可以每次通过对10 求余数判断整数的个位数字是不是1 。
-    * 如果这个数字大于10，除以10 之后再判断个位数字是不是1 。
+    * 累加1到n中每个整数1出现的次数。
+    * 我们可以每次通过对10求余数判断整数的个位数字是不是1，
+    * 如果这个数字大于10，除以10之后再判断个位数字是不是1。
     * 暴力枚举。
     *
     * @see https://www.coder4.com/archives/3366
@@ -22,7 +22,7 @@ object Test32 {
       var varI = i
       while (varI > 0) {
         if (varI % 10 == 1) count += 1
-        varI /= 10
+        varI /= 10 //double.toInt
       }
     }
     count
@@ -33,6 +33,9 @@ object Test32 {
     *      http://blog.csdn.net/ns_code/article/details/27563485
     *      将n的各个位分为两类：个位与其它位。
     *      找1出现的规律。
+    *
+    *      534 = （个位1出现次数）+（十位1出现次数）+（百位1出现次数）=（53*1+1）+（5*10+10）+（0*100+100）= 214
+    *      504 = （50*1+1）+（5*10）+（0*100+100） = 201
     */
   def numberOf1Between1AndNReg(n: Int): Int = {
     if (n < 1) throw new IllegalArgumentException("invalid input n")

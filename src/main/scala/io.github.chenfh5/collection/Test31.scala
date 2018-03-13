@@ -18,14 +18,14 @@ object Test31 {
       if (curMaxSum <= 0) curMaxSum = i //如果当前和小于等于0，就重置当前和
       else curMaxSum += i //如果当前和大于0，累加当前和
 
-      if (maxSum < curMaxSum) maxSum = curMaxSum //更新记录到的最在的子数组和
+      if (maxSum < curMaxSum) maxSum = curMaxSum //更新记录到的最大的子数组和
     }
     maxSum
   }
 
   def main(args: Array[String]): Unit = {
-    val input = Array(1, -2, 3, 10, -4, 7, 2, -5)
-    assert(findMaxSumOfSubArray(input) == 18) //3, 10, -4, 7
+    assert(findMaxSumOfSubArray(Array(1, -2, 3, 10, -4, 7, 2, -5)) == 18) //3, 10, -4, 7, 2
+    assert(findMaxSumOfSubArray(Array(1, -2, 3, 10, -4, 7, -2, -5)) == 16) //3, 10, -4, 7
   }
 
 }
