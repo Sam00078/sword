@@ -10,6 +10,17 @@ object Test20 {
 
   var result = ListBuffer[Int]()
 
+  def printMatrixClockWisely(arr: Array[Array[Int]]): Unit = {
+    if (arr == null) return
+    var row, col = 0
+
+    while (row * 2 < arr.length && col * 2 < arr.head.length) { //左+右，上+下各往返2次，折返时已经把对面的打印了，所以这里要折半
+      printMatrixInCircle(arr, row, col) //打印外围一圈
+      row += 1
+      col += 1
+    }
+  }
+
   def printMatrixInCircle(arr: Array[Array[Int]], row: Int, col: Int): Unit = {
     val (rows, cols) = (arr.length, arr.head.length)
 
@@ -38,17 +49,6 @@ object Test20 {
     }
   }
 
-  def printMatrixClockWisely(arr: Array[Array[Int]]): Unit = {
-    if (arr == null) return
-    var row, col = 0
-
-    while (row * 2 < arr.length - 1 && col * 1 < arr.head.length) { //左+右，上+下各往返2次，折返时已经把对面的打印了，所以这里要折半
-      printMatrixInCircle(arr, row, col) //打印外围一圈
-      row += 1
-      col += 1
-    }
-  }
-
   def main(args: Array[String]): Unit = {
     /*
      *  int[][] matrix = {
@@ -62,8 +62,6 @@ object Test20 {
     printMatrixClockWisely(matrix)
     println()
     println(result.mkString(","))
-
   }
-
 
 }

@@ -1,5 +1,8 @@
 package io.github.chenfh5.collection
 
+/**
+  * 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字
+  */
 object Test29 {
 
   def findTargetNum(arr: Array[Int]): Int = {
@@ -11,7 +14,7 @@ object Test29 {
     //找出最多的targetNum
     for (i <- arr.slice(1, arr.length)) {
       if (count == 0) {
-        targetNum = i
+        targetNum = i //key point
         count = 1
       }
       else if (targetNum == i) count += 1

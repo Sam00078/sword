@@ -15,8 +15,7 @@ object Test46 {
     var sum = 0
     isSum(n)
 
-    //recursion
-    def isSum(n: Int): Boolean = {
+    def isSum(n: Int): Boolean = { //recursion
       sum += n
       //      (n - 1 <= 0) || isSum(n - 1) //A || B 为如果前面为真就只执行前面的，否则需要执行后面的
       (n > 0) && isSum(n - 1) //A && B 同时为真才能过

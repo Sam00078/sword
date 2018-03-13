@@ -1,7 +1,7 @@
 package io.github.chenfh5.collection
 
 /**
-  * 题目：输入一个字符串，打印出该字符事中字符的所有排列。例如输入字符串abc。
+  * 输入一个字符串，打印出该字符事中字符的所有排列。例如输入字符串abc。
   * 则打印出由字符a、b、c 所能排列出来的所有字符串abc、acb、bac、bca、cab和cba。
   */
 object Test28 {
@@ -21,7 +21,7 @@ object Test28 {
       for (i <- beginIndex to endIndex) {
         swap(arr, i, beginIndex) //交换前缀，使其产生下一个前缀
         permutation(arr, beginIndex + 1, endIndex) //先a,再b，再c，然后回退到b，bc交换，再回退到a，ab交换，
-        swap(arr, beginIndex, i) //将前缀换回，继续做上一个前缀的排列
+        swap(arr, i, beginIndex) //将前缀换回，继续做上一个前缀的排列
       }
     }
   }

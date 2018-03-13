@@ -9,7 +9,8 @@ import io.github.chenfh5.common.{OwnConstant, OwnUtils, TreeNode, TreeOrder}
 object Test19 {
 
   def mirror(root: TreeNode): TreeNode = {
-    if (root != null) {
+    if (root == null) return root
+    else {
       //swap
       val temp = root.left
       root.left = root.right
@@ -26,7 +27,7 @@ object Test19 {
     val input = OwnConstant().treeRoot
     OwnUtils.printTree(input, TreeOrder.preOrder)
     println()
-    OwnUtils.printTree(mirror(input), TreeOrder.preOrder)
+    OwnUtils.printTree(mirror(input), TreeOrder.preOrder) //1 3 7 15 6 12 2 5 10 4 9
   }
 
 }

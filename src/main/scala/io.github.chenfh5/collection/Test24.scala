@@ -12,8 +12,12 @@ import io.github.chenfh5.common.{OwnConstant, TreeNode}
 object Test24 {
 
   class PostOrder() {
-
     private var list = ListBuffer[Int]()
+
+    def verifySquenceOfPostOrder(root: TreeNode, inputSeq: List[Int]): Boolean = {
+      doPost(root)
+      list.toList == inputSeq
+    }
 
     def doPost(root: TreeNode): Unit = {
       if (root != null) {
@@ -21,13 +25,6 @@ object Test24 {
         if (root.right != null) doPost(root.right)
         list += root.value
       }
-    }
-
-    def verifySquenceOfPostOrder(root: TreeNode, inputSeq: List[Int]): Boolean = {
-      doPost(root)
-      val postOrderReal = list
-
-      list.toList == inputSeq
     }
   }
 

@@ -1,8 +1,6 @@
 package io.github.chenfh5.collection
 
-import scala.collection.mutable.ListBuffer
-
-import org.slf4j.{Logger, LoggerFactory}
+import org.slf4j.LoggerFactory
 
 
 /**
