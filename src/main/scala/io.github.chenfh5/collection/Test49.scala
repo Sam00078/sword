@@ -8,7 +8,7 @@ object Test49 {
   /**
     * @see http://blog.csdn.net/ouyangyanlan/article/details/72897779
     */
-  def StrToInt(str: String): Int = {
+  def str2Int(str: String): Int = {
     if (str == null || str.length < 1 || str.length > Long.MaxValue.toString.length - 1) return 0
 
     var res = 0L
@@ -18,7 +18,7 @@ object Test49 {
     while (pos < str.length) {
       val char = str(pos)
       if (char > '9' || char < '0') return 0
-      res = (res << 1) + (res << 3) + (char & 0x0f) //(res << 1) + (res << 3) 即 res*2+res*8=res*10 + (str(pos) & 0x0f)即取低四位值
+      res = (res << 1) + (res << 3) + (char - '0') //(res << 1) + (res << 3) 即 res*2+res*8=res*10 + (str(pos) - '0')即取i的个位值，也可以是 (str(pos) & 0x0f)
       pos += 1
     }
 
@@ -32,15 +32,15 @@ object Test49 {
     println("Long.MinValue = " + Long.MinValue)
     println("Long.MinValue = " + Long.MinValue)
 
-    assert(StrToInt("1200354") == 1200354)
-    assert(StrToInt("+1200354") == 1200354)
-    assert(StrToInt("-1200354") == -1200354)
-    assert(StrToInt("+2147483647") == 2147483647)
-    assert(StrToInt("-2147483648") == -2147483648)
-    assert(StrToInt("+2147483649") == 0)
-    assert(StrToInt("-2147483649") == 0)
-    assert(StrToInt("00") == 0)
-    assert(StrToInt("123ab345") == 0)
+    assert(str2Int("1200354") == 1200354)
+    assert(str2Int("+1200354") == 1200354)
+    assert(str2Int("-1200354") == -1200354)
+    assert(str2Int("+2147483647") == 2147483647)
+    assert(str2Int("-2147483648") == -2147483648)
+    assert(str2Int("+2147483649") == 0)
+    assert(str2Int("-2147483649") == 0)
+    assert(str2Int("00") == 0)
+    assert(str2Int("123ab345") == 0)
   }
 
 }
