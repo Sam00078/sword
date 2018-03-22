@@ -33,11 +33,6 @@ object Test34 {
     targetNum
   }
 
-  private def minInThree(a: Int, b: Int, c: Int): Int = {
-    val min = if (a < b) a else b
-    if (min < c) min else c
-  }
-
   /**
     * @see http://blog.csdn.net/double2hao/article/details/53640824
     */
@@ -58,6 +53,11 @@ object Test34 {
       uglyArray(i) = minInThisLoop
     }
     uglyArray(pos - 1)
+  }
+
+  private def minInThree(a: Int, b: Int, c: Int): Int = {
+    val min = if (a < b) a else b
+    if (min < c) min else c
   }
 
   /**
