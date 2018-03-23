@@ -4,10 +4,10 @@ init:
   - git config --global core.autocrlf true
 
 build_script:
-  - mvn clean package --batch-mode -DskipTest
+  - mvn clean package --batch-mode
 
-test_script:
-  - mvn clean verify --batch-mode
+#test_script:
+#  - mvn clean verify --batch-mode
 
 cache:
   - C:\Users\appveyor\.m2
@@ -15,7 +15,6 @@ cache:
 notifications:
   - provider: Email
     to:
-      - chenfh5@qq.com
       - chenfh5@qq.com
     on_build_success: true
     on_build_failure: true
