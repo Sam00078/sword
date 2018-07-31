@@ -23,6 +23,7 @@ object MostWater_11 {
   def main(args: Array[String]): Unit = {
     val height = Array(1, 8, 6, 2, 5, 4, 8, 3, 7)
     println(s"maxArea= ${maxArea(height)}")
+    assert(maxArea(height) == 49)
   }
 
 }

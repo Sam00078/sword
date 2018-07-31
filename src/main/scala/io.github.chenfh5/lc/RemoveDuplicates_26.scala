@@ -20,7 +20,7 @@ object RemoveDuplicates_26 {
 
   def main(args: Array[String]): Unit = {
     val nums = Array(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)
-    println(s"unique size = ${removeDuplicates(nums)}")
+    assert(removeDuplicates(nums) == 5) //0, 1, 2, 3, 4, ...
   }
 
 }

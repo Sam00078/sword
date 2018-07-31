@@ -13,8 +13,8 @@ object RemoveElement_27 {
     var diffPos = 0
     for (i <- 0 until nums.length) {
       if (nums(i) != target) { // replace with diffPos when not equal to the target
-        nums(diffPos)=nums(i)
-        diffPos+=1
+        nums(diffPos) = nums(i)
+        diffPos += 1
       }
     }
     println(nums.toList)
@@ -24,7 +24,7 @@ object RemoveElement_27 {
   def main(args: Array[String]): Unit = {
     val nums = Array(0, 1, 2, 2, 3, 0, 4, 2)
     val target = 2
-    println(s"after remove element size = ${removeElement(nums, target)}")
+    assert(removeElement(nums, target) == 5) // 0, 1, 3, 0, 4, ...
   }
 
 }
