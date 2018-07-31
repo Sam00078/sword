@@ -1,4 +1,4 @@
-package io.github.chenfh5.leetcode
+package io.github.chenfh5.lc
 
 import scala.collection.mutable
 
