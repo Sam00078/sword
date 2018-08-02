@@ -1,6 +1,5 @@
 package io.github.chenfh5.lc
 
-import scala.collection.mutable
 
 object TwoSum_1 {
 
@@ -8,6 +7,7 @@ object TwoSum_1 {
     * @see https://leetcode.com/problems/two-sum/description/
     */
   def twoSum(nums: Array[Int], target: Int): Array[Int] = {
+    import scala.collection.mutable
     val leftMap = mutable.Map[Int, Int]()
 
     for (i <- 0 until nums.length) {
