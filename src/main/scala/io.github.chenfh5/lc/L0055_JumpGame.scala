@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object JumpGame_55 {
+object L0055_JumpGame {
 
   /**
     * @see https://leetcode.com/problems/jump-game/discuss/20932/6-line-java-solution-in-O(n)

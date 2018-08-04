@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object RemoveElement_27 {
+object L0027_RemoveElement {
 
   /**
     * @see https://stackoverflow.com/questions/223918/iterating-through-a-collection-avoiding-concurrentmodificationexception-when-re

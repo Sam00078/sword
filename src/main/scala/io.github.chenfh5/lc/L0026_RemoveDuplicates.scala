@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object RemoveDuplicates_26 {
+object L0026_RemoveDuplicates {
 
   // with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively
   def removeDuplicates(nums: Array[Int]): Int = {

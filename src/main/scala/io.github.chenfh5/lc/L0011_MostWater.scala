@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object MostWater_11 {
+object L0011_MostWater {
 
   /**
     * @see https://leetcode.com/problems/container-with-most-water/discuss/6100/Simple-and-clear-proofexplanation

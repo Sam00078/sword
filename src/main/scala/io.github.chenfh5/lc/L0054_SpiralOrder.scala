@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object SpiralOrder_54 {
+object L0054_SpiralOrder {
 
   /**
     * @see https://leetcode.com/problems/spiral-matrix/discuss/20570/Clean-Java-readable-human-friendly-code

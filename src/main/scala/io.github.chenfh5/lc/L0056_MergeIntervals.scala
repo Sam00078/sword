@@ -1,7 +1,7 @@
 package io.github.chenfh5.lc
 
 
-object MergeIntervals_56 {
+object L0056_MergeIntervals {
 
   /**
     * @see https://leetcode.com/problems/merge-intervals/discuss/155683/Beat-100-short-solution-Scala

@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object SearchRange_34 {
+object L0034_SearchRange {
 
   /**
     * @see https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14734/Easy-java-O(logn)-solution

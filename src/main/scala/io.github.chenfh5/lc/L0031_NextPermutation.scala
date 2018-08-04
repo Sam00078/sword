@@ -1,6 +1,6 @@
 package io.github.chenfh5.lc
 
-object NextPermutation_31 {
+object L0031_NextPermutation {
 
   /**
     * @see https://leetcode.com/problems/next-permutation/discuss/13872/Easiest-JAVA-Solution

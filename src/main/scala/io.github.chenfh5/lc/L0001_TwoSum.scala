@@ -1,7 +1,7 @@
 package io.github.chenfh5.lc
 
 
-object TwoSum_1 {
+object L0001_TwoSum {
 
   /**
     * @see https://leetcode.com/problems/two-sum/description/
