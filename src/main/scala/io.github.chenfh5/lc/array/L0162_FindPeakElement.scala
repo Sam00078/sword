@@ -1,4 +1,4 @@
-package io.github.chenfh5.lc
+package io.github.chenfh5.lc.array
 
 object L0162_FindPeakElement {
 
