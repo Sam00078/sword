@@ -3,7 +3,7 @@ package io.github.chenfh5.lc.array
 object L0661_ImageSmoother {
 
   /**
-    * @see leetcode.com/problems/image-smoother/discuss/106602/Very-Clean-Solution-in-Java/114998
+    * @see https://leetcode.com/problems/image-smoother/discuss/106602/Very-Clean-Solution-in-Java/114998
     */
   def imageSmoother(M: Array[Array[Int]]): Array[Array[Int]] = {
     if (M == null || M.length < 1 || M.head.length < 1) return M

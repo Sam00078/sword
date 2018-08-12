@@ -3,7 +3,7 @@ package io.github.chenfh5.lc.array
 object L0042_TrapWater {
 
   /**
-    * @see leetcode.com/problems/trapping-rain-water/discuss/17391/Share-my-short-solution./17215
+    * @see https://leetcode.com/problems/trapping-rain-water/discuss/17391/Share-my-short-solution./17215
     */
   def trap(height: Array[Int]): Int = {
     import math.max

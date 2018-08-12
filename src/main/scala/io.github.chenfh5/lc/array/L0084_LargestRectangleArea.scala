@@ -3,7 +3,7 @@ package io.github.chenfh5.lc.array
 object L0084_LargestRectangleArea {
 
   /**
-    * @see leetcode.com/problems/largest-rectangle-in-histogram/discuss/29010/My-modified-answer-from-GeeksforGeeks-in-JAVA/27903
+    * @see https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/29010/My-modified-answer-from-GeeksforGeeks-in-JAVA/27903
     */
   def largestRectangleArea(heights: Array[Int]): Int = {
     if (heights == null || heights.length < 1) return 0

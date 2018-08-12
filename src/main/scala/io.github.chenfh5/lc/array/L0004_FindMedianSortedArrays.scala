@@ -3,7 +3,7 @@ package io.github.chenfh5.lc.array
 object L0004_FindMedianSortedArrays {
 
   /**
-    * @see leetcode.com/problems/median-of-two-sorted-arrays/discuss/2471/Very-concise-O(log(min(MN)))-iterative-solution-with-detailed-explanation/141440
+    * @see https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2471/Very-concise-O(log(min(MN)))-iterative-solution-with-detailed-explanation/141440
     */
   // TODO: find more elegant and readable code from other authors' submission
   def findMedianSortedArrays(num1: Array[Int], num2: Array[Int]): Double = {

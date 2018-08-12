@@ -4,7 +4,7 @@ object L0169_MajorityElement {
 
   /**
     * @see https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution
-    *      leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution/127325
+    *      https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution/127325
     */
   def majorityElement(nums: Array[Int]): Int = {
     var (major, count) = (nums.head, 1)
