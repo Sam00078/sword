@@ -1,5 +1,7 @@
 package io.github.chenfh5.lc.array
 
+import _root_.io.github.chenfh5.lc.common.DataStruct.Interval
+
 
 object L0056_MergeIntervals {
 
@@ -28,9 +30,3 @@ object L0056_MergeIntervals {
   }
 
 }
-
-case class Interval(
-  var start: Int,
-  var end: Int
-)
-
