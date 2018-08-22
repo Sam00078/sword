@@ -12,7 +12,7 @@ object L0714_MaxProfit {
         // notHold[i] : The maximum profit of not hold stock until day i
         for (i <- 1 until prices.length) {
           hold = math.max(hold, notHold - prices(i)) // buy stock or not, if buy profit would minus price
-          notHold = math.max(notHold, hold + prices(i) - fee) // sell stock or not, if sell profit hot + price - fee
+          notHold = math.max(notHold, hold + prices(i) - fee) // sell stock or not, if sell profit hold + price - fee
         }
         notHold
     }
