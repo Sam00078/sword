@@ -2,10 +2,8 @@ package io.github.chenfh5.lc.array
 
 object L0162_FindPeakElement {
 
-  /**
-    * @see https://leetcode.com/problems/find-peak-element/discuss/50239/Java-solution-and-explanation-using-invariants
-    *      local peak number
-    */
+  // @see https://leetcode.com/problems/find-peak-element/discuss/50239/Java-solution-and-explanation-using-invariants
+  // local peak number
   def findPeakElement(nums: Array[Int]): Int = {
     var (left, mid, right) = (0, 0, nums.length - 1)
     while (left < right) {

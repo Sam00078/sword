@@ -2,9 +2,7 @@ package io.github.chenfh5.lc.array
 
 object L0042_TrapWater {
 
-  /**
-    * @see https://leetcode.com/problems/trapping-rain-water/discuss/17391/Share-my-short-solution./17215
-    */
+  // @see https://leetcode.com/problems/trapping-rain-water/discuss/17391/Share-my-short-solution./17215
   def trap(height: Array[Int]): Int = {
     import math.max
     var trapedWater = 0
@@ -14,6 +12,8 @@ object L0042_TrapWater {
 
     while (leftPos <= rightPos) {
       if (leftMaxHeight < rightMaxHeight) {
+        // mutongxiaoying, Buckets effect, smaller is matter
+        // leftmax is smaller than rightmax, so the (leftmax-A[a]) water can be stored
         leftMaxHeight = max(leftMaxHeight, height(leftPos))
         trapedWater += leftMaxHeight - height(leftPos) // if leftMaxHeight in the left then would store
         leftPos += 1

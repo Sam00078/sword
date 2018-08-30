@@ -13,7 +13,7 @@ object L0064_MinPathSum {
       // column
       for (j <- 0 until grid.head.length) {
         // accumulate the min sum as one grid
-        if (i == 0 && j != 0) grid(i)(j) += grid(i)(j - 1) //first row
+        if (i == 0 && j != 0) grid(i)(j) += grid(i)(j - 1) //first row, DP
         if (i != 0 && j == 0) grid(i)(j) += grid(i - 1)(j) // first column
         if (i != 0 && j != 0) grid(i)(j) += math.min(grid(i)(j - 1), grid(i - 1)(j)) // 1,2 -> 1,1 or 0,2 @ 1,1 -> 0,1 or 1,0
       }

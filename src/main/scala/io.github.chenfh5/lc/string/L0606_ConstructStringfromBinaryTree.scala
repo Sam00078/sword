@@ -6,8 +6,8 @@ object L0606_ConstructStringfromBinaryTree {
   // preOrder: root->left->right
   def tree2str(t: TreeNode): String = {
     if (t == null) return ""
-    val sb = new StringBuilder(t.value + "")
-    if (t.left == null && t.right == null) return sb.toString()
+    val sb = new StringBuilder(t.value.toString)
+    if (t.left == null && t.right == null) return sb.toString() // root
     sb.append("(" + tree2str(t.left) + ")") // always have this layer. so left is need, and right is need too, but if right is null, it would be unnecessary empty parenthesis. each node wrap with a pair parenthesis
     if (t.right != null) sb.append("(" + tree2str(t.right) + ")")
     sb.toString()

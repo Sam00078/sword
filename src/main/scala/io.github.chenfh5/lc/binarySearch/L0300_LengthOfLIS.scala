@@ -5,7 +5,7 @@ object L0300_LengthOfLIS {
   // @see https://leetcode.com/problems/longest-increasing-subsequence/discuss/74953/Java-solution-dp-simple
   def lengthOfLIS(nums: Array[Int]): Int = {
     if (nums == null || nums.length < 1) return 0
-    val dp = new Array[Int](nums.length)
+    val dp = new Array[Int](nums.length) // the LIS till ith
     var max = 1
     for (right <- 0 until nums.length) {
       dp(right) = 1 // one element at least
@@ -24,6 +24,7 @@ object L0300_LengthOfLIS {
     val nums = Array(10, 9, 2, 5, 3, 6, 7, 101, 18)
     val res = lengthOfLIS(nums)
     print(res)
+    assert(res == 5) //2,5,6,7,101
   }
 
 }

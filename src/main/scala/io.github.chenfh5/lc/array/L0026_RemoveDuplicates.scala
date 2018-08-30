@@ -8,9 +8,10 @@ object L0026_RemoveDuplicates {
 
     var uniqueSize = 0
     for (i <- 1 until nums.length) {
-      if (nums(i) != nums(uniqueSize)) { // replace with uniqueSize when not equal to the next element
+      if (nums(i) != nums(uniqueSize)) {
+        // replace with uniqueSize when not equal to the next element
         uniqueSize += 1
-        nums(uniqueSize) = nums(i)
+        nums(uniqueSize) = nums(i) // no swap, just replace directly
       }
     }
     uniqueSize += 1

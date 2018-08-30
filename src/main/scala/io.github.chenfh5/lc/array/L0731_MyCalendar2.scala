@@ -14,7 +14,7 @@ class MyCalendar2() {
     for (book <- books) {
       // since it is the sorted map, it would add the left entry firstly, then minus the right to balance the booked count
       // (1stL,1stR) vs. (2ndL, 2ndR) vs. (3rdL, 3rdR). if 3rdL > 1stR & 3rdL > 2ndR, then booked count would not minus 1 until 3rdL arrival
-      bookedCnt += book._2
+      bookedCnt += book._2 // the value of one key
       if (bookedCnt == conflictCnt) {
         // reject and rollback
         books += (start -> (books.getOrElse(start, 0) - 1))

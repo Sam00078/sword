@@ -8,7 +8,7 @@ object L0875_MinEatingSpeed {
     while (lo < hi) {
       var (mid, totalEatTimeInSpeedMid) = (lo + (hi - lo) / 2, 0) // real try speed
       for (p <- piles) totalEatTimeInSpeedMid += math.ceil(p.toDouble / mid).toInt // not floor
-      if (totalEatTimeInSpeedMid > H) lo = mid + 1
+      if (totalEatTimeInSpeedMid > H) lo = mid + 1 // eat too slow, so time is large. try to speed up
       else hi = mid
     }
     lo

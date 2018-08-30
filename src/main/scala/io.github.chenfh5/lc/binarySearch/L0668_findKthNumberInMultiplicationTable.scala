@@ -7,8 +7,7 @@ object L0668_findKthNumberInMultiplicationTable {
     var (lo, hi) = (0, m * n)
     while (lo < hi) {
       val mid = lo + (hi - lo) / 2 // mid value of the whole matrix at first
-      val cnt = count(mid, m, n)
-      if (cnt < k) lo = mid + 1 // not enough
+      if (count(mid, m, n) < k) lo = mid + 1 // not enough
       else hi = mid
     }
     lo
@@ -19,7 +18,7 @@ object L0668_findKthNumberInMultiplicationTable {
     for (i <- 1 to m) {
       // row from 1 to end
       // the largest num in row i, is k*i->last -> k= last/i -> cnt=mid/i
-      val temp = math.min(mid / i, n) // In the i-th row, the table looks like [i, 2*i, 3*i, ..., n*i]. @see leetcode.com/problems/kth-smallest-number-in-multiplication-table/discuss/106984/Python-Straightforward-with-Explanation/109269
+      val temp = math.min(mid / i, n) // In the i-th row, the table looks like [i, 2*i, 3*i, ..., n*i]. @see https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/discuss/106984/Python-Straightforward-with-Explanation/109269
       cnt += temp
     }
     cnt

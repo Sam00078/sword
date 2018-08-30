@@ -17,6 +17,7 @@ object L0852_PeakIndexInMountainArray {
     val A = Array(0, 2, 1, 0)
     val res = peakIndexInMountainArray(A)
     print(res)
+    assert(res == 1) // 2
   }
 
 }

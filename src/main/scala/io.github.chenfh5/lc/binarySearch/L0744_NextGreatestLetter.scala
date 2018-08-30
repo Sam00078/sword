@@ -10,7 +10,7 @@ object L0744_NextGreatestLetter {
       if (letters(mid) <= target) lo = mid + 1 // equal should be not right, since it need next
       else hi = mid
     }
-    letters(lo % letters.length) // wrap around. onlu(lo=len)
+    letters(lo % letters.length) // wrap around. only(lo=len)
   }
 
   def main(args: Array[String]) {

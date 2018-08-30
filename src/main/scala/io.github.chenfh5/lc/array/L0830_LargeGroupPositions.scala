@@ -14,7 +14,7 @@ object L0830_LargeGroupPositions {
         var (begin, end) = (i, i + 2)
         while (end < S.length - 1 && S(end) == S(end + 1)) end += 1
         res += List[Int](begin, end)
-        i = end + 1
+        i = end + 1 // next loop
       } else i += 1
     }
     res.toList

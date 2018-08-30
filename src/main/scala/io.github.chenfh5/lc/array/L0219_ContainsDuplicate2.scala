@@ -9,7 +9,7 @@ object L0219_ContainsDuplicate2 {
     val set = scala.collection.mutable.Set[Int]()
     for (i <- 0 until nums.length) {
       if (i > k) set.remove(nums(i - k - 1)) // sliding windows
-      if (!set.add(nums(i))) return true
+      if (!set.add(nums(i))) return true // already have
     }
     false
   }

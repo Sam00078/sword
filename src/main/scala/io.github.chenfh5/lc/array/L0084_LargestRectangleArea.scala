@@ -2,9 +2,7 @@ package io.github.chenfh5.lc.array
 
 object L0084_LargestRectangleArea {
 
-  /**
-    * @see https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/29010/My-modified-answer-from-GeeksforGeeks-in-JAVA/27903
-    */
+  // @see https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/29010/My-modified-answer-from-GeeksforGeeks-in-JAVA/27903
   def largestRectangleArea(heights: Array[Int]): Int = {
     if (heights == null || heights.length < 1) return 0
 
@@ -14,11 +12,11 @@ object L0084_LargestRectangleArea {
     for (i <- 0 to heights.length) {
       // if the height of left taller than right need to adjust, else append the right to the stack until the last element to make it the width
       while (stack.nonEmpty && (i == heights.length || heights(stack.top) >= heights(i))) {
-        val h = heights(stack.pop())
+        val h = heights(stack.pop()) // reset the left
         val w = if (stack.isEmpty) i else i - stack.top - 1
         maxArea = math.max(maxArea, h * w)
       }
-      stack.push(i)
+      stack.push(i) // index only, asc
     }
     maxArea
   }

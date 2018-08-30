@@ -3,8 +3,8 @@ package io.github.chenfh5.lc.array
 object L0667_BeautifulArrangement2 {
 
   /*
-    @see [[https://leetcode.com/problems/beautiful-arrangement-ii/discuss/106963/Java-simple-solution]]
-    @see [[https://leetcode.com/problems/beautiful-arrangement-ii/discuss/106948/C++-Java-Clean-Code-4-liner]]
+    @see https://leetcode.com/problems/beautiful-arrangement-ii/discuss/106963/Java-simple-solution
+    @see https://leetcode.com/problems/beautiful-arrangement-ii/discuss/106948/C++-Java-Clean-Code-4-liner
     if you have n number, the maximum k can be n - 1
 
       i: 1   2   3   4   5

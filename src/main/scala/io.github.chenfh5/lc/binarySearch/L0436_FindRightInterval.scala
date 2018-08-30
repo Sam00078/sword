@@ -11,7 +11,7 @@ object L0436_FindRightInterval {
     for (i <- 0 until len) map += (intervals(i).start -> i) // put left
 
     for (i <- 0 until len) {
-      val entry = map.from(intervals(i).end).headOption // find left using right
+      val entry = map.from(intervals(i).end).headOption // bigger than or equal. find left using right
       res(i) = if (entry.isDefined) entry.get._2 else -1
     }
     res

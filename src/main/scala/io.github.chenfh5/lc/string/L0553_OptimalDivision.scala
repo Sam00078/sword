@@ -3,6 +3,7 @@ package io.github.chenfh5.lc.string
 object L0553_OptimalDivision {
 
   // @see https://leetcode.com/problems/optimal-division/discuss/101687/Easy-to-understand-simple-O(n)-solution-with-explanation
+  // x1/x2/x3/x4 -> max: x1/(x2/x3/x4)
   def optimalDivision(nums: Array[Int]): String = {
     if (nums == null || nums.length < 1) return ""
     if (nums.length == 1) return nums.head.toString

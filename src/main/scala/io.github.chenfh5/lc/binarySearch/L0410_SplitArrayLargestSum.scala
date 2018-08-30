@@ -2,7 +2,7 @@ package io.github.chenfh5.lc.binarySearch
 
 object L0410_SplitArrayLargestSum {
 
-  // @see https://leetcode.com/problems/split-array-largest-sum/discuss/89817/Clear-Explanation:-8ms-Binary-Search-Java
+  // @see https://leetcode.com/problems/split-array-largxest-sum/discuss/89817/Clear-Explanation:-8ms-Binary-Search-Java
   def splitArray(nums: Array[Int], m: Int): Int = {
     var (max, sum) = (0, 0)
     for (num <- nums) {
@@ -15,7 +15,7 @@ object L0410_SplitArrayLargestSum {
     while (l < r) {
       val mid = l + (r - l) / 2
       if (valid(mid, nums, m)) r = mid // already pick but still too many cut. therefore to narrow down the high
-      else l = mid + 1
+      else l = mid + 1 // valid-false means too many cut, so need to make mid larger, so total>mid is less
     }
     l
   }

@@ -11,7 +11,7 @@ object L0118_PascalTriangle {
     var rowData = ListBuffer[Int]() // in the whole process, only one rowData, but each stop, the rowData would be add and change
 
     for (i <- 0 until numRows) {
-      rowData = ListBuffer(1) ++ rowData
+      rowData = ListBuffer(1) ++ rowData // append the previous
       for (j <- 1 until rowData.size - 1) {
         rowData(j) = rowData(j) + rowData(j + 1) // used (current, next) the make current; after that to react the new (current, next)
       }

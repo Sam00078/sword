@@ -9,12 +9,12 @@ object L0565_ArrayNesting {
     var maxSize = 0
     for (i <- 0 until nums.length) {
       var curSize = 0
-      var nestPos = i
-      while (nums(nestPos) >= 0) {
+      var nextPos = i
+      while (nums(nextPos) >= 0) {
         // swap value and pos
-        val numVal = nums(nestPos)
-        nums(nestPos) = -1
-        nestPos = numVal
+        val numVal = nums(nextPos)
+        nums(nextPos) = -1 // disable it
+        nextPos = numVal
 
         curSize += 1
       }

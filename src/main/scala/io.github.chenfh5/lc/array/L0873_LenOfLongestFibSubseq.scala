@@ -4,7 +4,7 @@ object L0873_LenOfLongestFibSubseq {
 
   // @see https://leetcode.com/problems/length-of-longest-fibonacci-subsequence/discuss/152343/C++JavaPython-Check-Pair
   def lenLongestFibSubseq(A: Array[Int]): Int = {
-    val set = A.toSet
+    val set = A.toSet // convert whole already
     var res = 2
     for (i <- 0 until A.length) {
       for (j <- i + 1 until A.length) {

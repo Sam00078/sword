@@ -7,14 +7,14 @@ object L0714_MaxProfit {
     prices match {
       case _ if prices == null || prices.length <= 1 => 0
       case _ =>
-        var (hold, notHold) = (0 - prices.head, 0)
-        // hold[i] : The maximum profit of holding stock until day i
-        // notHold[i] : The maximum profit of not hold stock until day i
+        var (buy, sell) = (0 - prices.head, 0)
+        // buy[i] : The maximum profit of holding stock until day i
+        // sell[i] : The maximum profit of not buy stock until day i
         for (i <- 1 until prices.length) {
-          hold = math.max(hold, notHold - prices(i)) // buy stock or not, if buy profit would minus price
-          notHold = math.max(notHold, hold + prices(i) - fee) // sell stock or not, if sell profit hold + price - fee
+          buy = math.max(buy, sell - prices(i)) // buy stock or not, if buy profit would minus price. Pay the price to buy stock, so profit down
+          sell = math.max(sell, buy + prices(i) - fee) // sell stock or not, if sell profit buy + price - fee
         }
-        notHold
+        sell
     }
   }
 

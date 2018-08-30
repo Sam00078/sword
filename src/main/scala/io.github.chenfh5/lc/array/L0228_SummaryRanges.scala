@@ -14,7 +14,7 @@ object L0228_SummaryRanges {
         for (i <- 0 until numsLen) {
           temp.append(nums(i).toString)
           if (i >= numsLen - 1 || nums(i + 1) != nums(i) + 1) {
-            if (temp.length < 2) res.append(temp.head)
+            if (temp.length < 2) res.append(temp.head) // temp always ge 1
             else res.append(temp.head + "->" + temp.last)
             temp.clear()
           }
