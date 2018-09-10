@@ -16,7 +16,7 @@ object Test28 {
   def permutation(arr: Array[Char], beginIndex: Int, endIndex: Int): Unit = {
     if (arr == null || arr.length < 1) throw new RuntimeException("invalid input size")
 
-    if (beginIndex == endIndex) print(new String(arr) + " ")
+    if (beginIndex == endIndex) print(new String(arr) + ", ")
     else {
       for (i <- beginIndex to endIndex) {
         swap(arr, i, beginIndex) //交换前缀，使其产生下一个前缀

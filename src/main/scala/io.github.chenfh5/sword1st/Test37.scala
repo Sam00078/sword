@@ -53,10 +53,10 @@ object Test37 {
   }
 
   def main(args: Array[String]): Unit = {
-    val head1 = LinkNode(1,
-      LinkNode(2,
+    val head1 = LinkNode(6,
+      LinkNode(7,
         LinkNode(3,
-          LinkNode(6,
+          LinkNode(1,
             LinkNode(7, null)
           ))))
 

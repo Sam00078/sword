@@ -18,11 +18,11 @@ object Test08 {
       /*二分查找*/
       mid = (low + high) / 2
 
-      /*corner case*/
+      /*corner case*/ // 111112
       if (numbers(low) == numbers(mid) && numbers(mid) == numbers(high)) return numbers.slice(low, high).min
 
       if (numbers(low) < numbers(mid)) low = mid //45623
-      else high = mid //56234
+      else high = mid // 56234
     }
 
     numbers(mid)

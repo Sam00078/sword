@@ -18,7 +18,7 @@ object Test38 {
     var mid = 0
     var hitCnt = 0
 
-    //找到第一个targetNum出现在arr的位置x
+    //找到其中一个targetNum出现在arr的位置x
     var hit = false
     while (start <= end && !hit) {
       mid = (start + end) >> 1 // n/2

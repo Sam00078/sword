@@ -33,7 +33,7 @@ object Test30 {
 
     var result = ListBuffer[Int]()
     //    val minHeap = mutable.PriorityQueue[Int]()(Ordering[Int].reverse) //小根堆(root最小)
-    val maxHeap = mutable.PriorityQueue[Int]()(Ordering[Int]) //大根堆(root最大)
+    val maxHeap = mutable.PriorityQueue[Int]()(Ordering[Int]) //大根堆(root最大),弹出的是root,剩余的都比root小
     //
     for (i <- arr) {
       if (maxHeap.size < leastNum) maxHeap.enqueue(i)
