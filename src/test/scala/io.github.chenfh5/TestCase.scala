@@ -3,7 +3,7 @@ package io.github.chenfh5
 import org.slf4j.LoggerFactory
 import org.testng.annotations.{AfterClass, BeforeSuite, Test}
 
-import io.github.chenfh5.collection._
+import io.github.chenfh5.sword1st._
 import io.github.chenfh5.common.{OwnConstant, OwnUtils, TreeOrder}
 
 
