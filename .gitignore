@@ -39,3 +39,6 @@ hs_err_pid*
 /.idea/
 /scala-test-blockchain.iml
 /sword.iml
+
+Solution.java
+TestOnly.scala

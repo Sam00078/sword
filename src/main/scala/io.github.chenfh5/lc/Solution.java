@@ -4,6 +4,7 @@ class Solution {
 
     public static void main(String[] args) {
         String str = "chenfh5_java_test";
+
         System.out.println(str);
     }
 
