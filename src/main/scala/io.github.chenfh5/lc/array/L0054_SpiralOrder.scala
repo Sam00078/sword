@@ -52,7 +52,6 @@ object L0054_SpiralOrder {
     val res = spiralOrder(matrix)
     println(res)
     assert(res == List(1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7))
-
   }
 
 }

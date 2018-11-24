@@ -7,7 +7,7 @@ package io.github.chenfh5.sword1st
 object Test03 {
 
   /**
-    * 规律：x>number右移，x<number下移
+    * 规律：x>number右移，x< number下移
     */
   def find(matrix: Array[Array[Int]], targetNumber: Int): Boolean = {
     if (matrix == null || matrix.length < 1 || matrix.head.length < 1) return false
@@ -18,7 +18,7 @@ object Test03 {
     var startRow = 0
     var startCol = colSize - 1
 
-    if (targetNumber < matrix(startRow)(startCol) || targetNumber > matrix(rowSize - 1)(colSize - 1)) return false
+    if (targetNumber < matrix.head.head || targetNumber > matrix.last.last) return false
 
     while (startRow >= 0 && startRow < rowSize && startCol >= 0 && startCol < colSize) {
       if (matrix(startRow)(startCol) == targetNumber) return true
