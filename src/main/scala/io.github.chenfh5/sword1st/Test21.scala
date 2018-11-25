@@ -12,7 +12,8 @@ import scala.collection.mutable
   */
 object Test21 {
 
-  class OwnStack[T <% Ordered[T]] { //限定明确边界
+  class OwnStack[T <% Ordered[T]] {
+    //限定明确边界
     private val dataStack = mutable.Stack[T]()
     private val minStack = mutable.Stack[T]()
 
@@ -29,7 +30,7 @@ object Test21 {
 
       dataStack.push(t)
       if (minStack.isEmpty) minStack.push(t)
-      else if (t < minStack.top) minStack.push(t) //泛型比较；待入栈数据如果小于minStack的top，就将其入栈
+      else if (t <= minStack.top) minStack.push(t) //泛型比较；待入栈数据如果小于minStack的top，就将其入栈
     }
 
     def min(): T = {

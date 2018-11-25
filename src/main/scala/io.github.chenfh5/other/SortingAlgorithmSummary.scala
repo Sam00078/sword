@@ -10,7 +10,7 @@ import java.util.Date
   */
 object SortingAlgorithmSummary {
 
-  /*1. insert插入排序*/
+  /*1. insert, 插入排序*/
   def insertSort(arr: Array[Int]): Array[Int] = {
     if (arr == null || arr.length < 1) throw new IllegalArgumentException("invalid input array")
     //从第一个开始遍历
@@ -24,7 +24,7 @@ object SortingAlgorithmSummary {
     arr
   }
 
-  /*2. shell希尔排序*/
+  /*2. shell, 希尔排序*/
   def shellSort(arr: Array[Int]): Array[Int] = {
     if (arr == null || arr.length < 1) throw new IllegalArgumentException("invalid input array")
     var gap = arr.length / 2 //使用当前gap进行组内插入排序
@@ -41,7 +41,7 @@ object SortingAlgorithmSummary {
     arr
   }
 
-  /*3. select选择排序*/
+  /*3. select, 选择排序*/
   def selectSort(arr: Array[Int]): Array[Int] = {
     if (arr == null || arr.length < 1) throw new IllegalArgumentException("invalid input array")
     for (i <- 0 until arr.length) {
@@ -56,7 +56,7 @@ object SortingAlgorithmSummary {
   }
 
 
-  /*4. heap堆排序*/
+  /*4. heap, 堆排序*/
   def heapSort(arr: Array[Int]): Array[Int] = {
     if (arr == null || arr.length < 1) throw new IllegalArgumentException("invalid input array")
     //堆长度递减

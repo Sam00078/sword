@@ -15,7 +15,8 @@ object Test20 {
     if (arr == null) return
     var row, col = 0
 
-    while (row * 2 < arr.length && col * 2 < arr.head.length) { //左+右，上+下各往返2次，折返时已经把对面的打印了，所以这里要折半
+    while (row * 2 < arr.length && col * 2 < arr.head.length) {
+      //左+右，上+下各往返2次，折返时已经把对面的打印了，所以这里要折半
       printMatrixInCircle(arr, row, col) //打印外围一圈
       row += 1
       col += 1
@@ -48,6 +49,48 @@ object Test20 {
       print(arr(i)(col) + "_")
       result += arr(i)(col)
     }
+  }
+
+  def spiralOrder(matrix: Array[Array[Int]]): List[Int] = {
+    import scala.collection.mutable.ListBuffer
+    val res = ListBuffer[Int]()
+    if (matrix == null || matrix.length < 1 || matrix.head.length < 1) return res.toList
+
+    var (top, right, bottom, left) = (0, matrix.head.length - 1, matrix.length - 1, 0) // clockwise
+    var done = false
+    while (!done) {
+      // left -> right
+      for (i <- Range(left, right).inclusive) res += matrix(top)(i)
+      top += 1
+      done = isDone(top, right, bottom, left)
+
+      // top -> bottom
+      if (!done) {
+        for (i <- Range(top, bottom).inclusive) res += matrix(i)(right) // since the upper level have add/minus 1, therefore inclusive
+        right -= 1
+        done = isDone(top, right, bottom, left)
+      }
+
+      // right -> left
+      if (!done) {
+        for (i <- Range(right, left, -1).inclusive) res += matrix(bottom)(i)
+        bottom -= 1
+        done = isDone(top, right, bottom, left)
+      }
+
+      // bottom -> top
+      if (!done) {
+        for (i <- Range(bottom, top, -1).inclusive) res += matrix(i)(left)
+        left += 1
+        done = isDone(top, right, bottom, left)
+      }
+    }
+    res.toList
+  }
+
+  def isDone(top: Int, right: Int, bottom: Int, left: Int): Boolean = {
+    if (left > right || top > bottom) true
+    else false
   }
 
   def main(args: Array[String]): Unit = {
