@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0565_ArrayNesting {
 
-  /**
-    * @see https://leetcode.com/problems/array-nesting/discuss/102432/C++-Java-Clean-Code-O(N)
-    */
+  // @see https://leetcode.com/problems/array-nesting/discuss/102432/C++-Java-Clean-Code-O(N)
   def arrayNesting(nums: Array[Int]): Int = {
     var maxSize = 0
     for (i <- 0 until nums.length) {

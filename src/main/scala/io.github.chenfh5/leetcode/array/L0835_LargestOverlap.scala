@@ -18,7 +18,7 @@ object L0835_LargestOverlap {
     val map = mutable.Map[String, Int]()
     for (a <- oneCoordOfA) {
       for (b <- oneCoordOfB) {
-        val vectorStr = (a.head - b.head) + " " + (a(1) - b(1)) // get the vector from a pixel in A to a pixel in B
+        val vectorStr = (a.head - b.head) + "_" + (a.last - b.last) // get the vector from a pixel in A to a pixel in B
         map.put(vectorStr, map.getOrElse(vectorStr, 0) + 1) // vector increase
       }
     }

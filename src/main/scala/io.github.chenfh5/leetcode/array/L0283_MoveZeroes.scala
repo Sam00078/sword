@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0283_MoveZeroes {
 
-  /**
-    * @see https://leetcode.com/problems/move-zeroes/discuss/72011/Simple-O(N)-Java-Solution-Using-Insert-Index
-    */
+  // @see https://leetcode.com/problems/move-zeroes/discuss/72011/Simple-O(N)-Java-Solution-Using-Insert-Index
   def moveZeroes(nums: Array[Int]): Unit = {
     var zeroPos = 0
     for (i <- 0 until nums.length) {

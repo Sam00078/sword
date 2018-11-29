@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0605_CanPlaceFlowers {
 
-  /**
-    * @see https://leetcode.com/problems/can-place-flowers/discuss/103898/Java-Greedy-solution-O(flowerbed)-beats-100
-    */
+  // @see https://leetcode.com/problems/can-place-flowers/discuss/103898/Java-Greedy-solution-O(flowerbed)-beats-100
   def canPlaceFlowers(flowerbed: Array[Int], n: Int): Boolean = {
     var count = 0
     for (i <- 0 until flowerbed.length if count < n) {

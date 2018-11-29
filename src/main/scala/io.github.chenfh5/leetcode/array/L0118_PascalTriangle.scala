@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0118_PascalTriangle {
 
-  /**
-    * @see https://leetcode.com/problems/pascals-triangle/discuss/38141/My-concise-solution-in-Java
-    */
+  // @see https://leetcode.com/problems/pascals-triangle/discuss/38141/My-concise-solution-in-Java
   def generate(numRows: Int): List[List[Int]] = {
     import scala.collection.mutable.ListBuffer
     val allRows = ListBuffer[List[Int]]()

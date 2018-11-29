@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0034_SearchRange {
 
-  /**
-    * @see https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14734/Easy-java-O(logn)-solution
-    */
+  // @see https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14734/Easy-java-O(logn)-solution
   def searchRange(nums: Array[Int], target: Int): Array[Int] = {
     val left = findBound(nums, target, isFindLeft = true)
     val right = if (left > -1) findBound(nums, target, isFindLeft = false) else -1

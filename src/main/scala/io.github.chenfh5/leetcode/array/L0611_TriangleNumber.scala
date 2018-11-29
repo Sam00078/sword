@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0611_TriangleNumber {
 
-  /**
-    * @see https://leetcode.com/problems/valid-triangle-number/discuss/104174/Java-O(n2)-Time-O(1)-Space
-    */
+  // @see https://leetcode.com/problems/valid-triangle-number/discuss/104174/Java-O(n2)-Time-O(1)-Space
   def triangleNumber(nums: Array[Int]): Int = {
     val sortedNums = nums.sortWith(_ < _)
     val len = nums.length
@@ -22,9 +20,7 @@ object L0611_TriangleNumber {
     count
   }
 
-  /**
-    * @see https://leetcode.com/submissions/detail/168129897/
-    */
+  // @see https://leetcode.com/submissions/detail/168129897/
   def triangleNumber2(nums: Array[Int]): Int = {
     val len = nums.length
     var cnt = 0
@@ -34,9 +30,9 @@ object L0611_TriangleNumber {
       val b = nums(j)
       val c = nums(k)
       if (a > 0 && b > 0 && c > 0 &&
-          a + b > c &&
-          b + c > a &&
-          a + c > b) {
+        a + b > c &&
+        b + c > a &&
+        a + c > b) {
         cnt += 1
       }
     }

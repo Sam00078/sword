@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0122_MaxProfit2 {
 
-  /**
-    * @see https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/39402/Is-this-question-a-joke
-    */
+  // @see https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/39402/Is-this-question-a-joke
   def maxProfit(prices: Array[Int]): Int = {
     var totalProf = 0
     for (i <- 0 until prices.length - 1) {

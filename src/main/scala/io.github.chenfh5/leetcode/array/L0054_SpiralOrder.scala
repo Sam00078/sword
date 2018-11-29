@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0054_SpiralOrder {
 
-  /**
-    * @see https://leetcode.com/problems/spiral-matrix/discuss/20570/Clean-Java-readable-human-friendly-code
-    */
+  // @see https://leetcode.com/problems/spiral-matrix/discuss/20570/Clean-Java-readable-human-friendly-code
   def spiralOrder(matrix: Array[Array[Int]]): List[Int] = {
     import scala.collection.mutable.ListBuffer
     val res = ListBuffer[Int]()

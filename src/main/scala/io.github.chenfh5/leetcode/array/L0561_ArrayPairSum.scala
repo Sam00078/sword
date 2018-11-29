@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0561_ArrayPairSum {
 
-  /**
-    * @see https://blog.csdn.net/mine_soul/article/details/70652353
-    */
+  // @see https://blog.csdn.net/mine_soul/article/details/70652353
   def arrayPairSum(nums: Array[Int]): Int = {
     val sortNums = nums.sortWith(_ < _)
     var res = 0

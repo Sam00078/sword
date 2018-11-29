@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0661_ImageSmoother {
 
-  /**
-    * @see https://leetcode.com/problems/image-smoother/discuss/106602/Very-Clean-Solution-in-Java/114998
-    */
+  // @see https://leetcode.com/problems/image-smoother/discuss/106602/Very-Clean-Solution-in-Java/114998
   def imageSmoother(M: Array[Array[Int]]): Array[Array[Int]] = {
     if (M == null || M.length < 1 || M.head.length < 1) return M
     val (row, col) = (M.length, M.head.length)
@@ -28,7 +26,7 @@ object L0661_ImageSmoother {
       for (j <- -1 to 1) {
         // out of boundary, so skip
         if (x + i < 0 || x + i >= row ||
-            y + j < 0 || y + j >= col) None
+          y + j < 0 || y + j >= col) None
         else {
           count += 1
           sum += M(x + i)(y + j)

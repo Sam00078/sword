@@ -5,9 +5,7 @@ import _root_.io.github.chenfh5.leetcode.common.DataStruct.Interval
 
 object L0056_MergeIntervals {
 
-  /**
-    * @see https://leetcode.com/problems/merge-intervals/discuss/155683/Beat-100-short-solution-Scala
-    */
+  // @see https://leetcode.com/problems/merge-intervals/discuss/155683/Beat-100-short-solution-Scala
   def merge(intervals: List[Interval]): List[Interval] = {
     val sortedIntervals = intervals.sortWith(_.start < _.start)
     import scala.collection.mutable.ListBuffer

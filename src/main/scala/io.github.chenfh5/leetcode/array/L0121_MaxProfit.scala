@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0121_MaxProfit {
 
-  /**
-    * @see https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39039/Sharing-my-simple-and-clear-C++-solution
-    */
+  // @see https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39039/Sharing-my-simple-and-clear-C++-solution
   def maxProfit(prices: Array[Int]): Int = {
     if (prices == null || prices.length < 2) return 0
 

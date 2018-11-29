@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0665_NonDecreasingArray {
 
-  /**
-    * @see http://leetcode.com/problems/non-decreasing-array/discuss/106826/JavaC++-Simple-greedy-like-solution-with-explanation
-    */
+  // @see http://leetcode.com/problems/non-decreasing-array/discuss/106826/JavaC++-Simple-greedy-like-solution-with-explanation
   def checkPossibility(nums: Array[Int]): Boolean = {
     var count = 0
     for (i <- 1 until nums.length if count <= 1) {

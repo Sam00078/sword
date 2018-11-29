@@ -2,10 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0128_LongestConsecutiveSeq {
 
-  /**
-    * @see https://leetcode.com/submissions/detail/167517079/
-    *      sample 408 ms submission
-    */
+  // @see https://leetcode.com/submissions/detail/167517079/
   def longestConsecutive(nums: Array[Int]): Int = {
     var (set, maxLen) = (nums.toSet, 0)
     for (oneNum <- nums) {

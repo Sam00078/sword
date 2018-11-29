@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0566_MatrixReshape {
 
-  /**
-    * @see https://leetcode.com/problems/reshape-the-matrix/discuss/102491/Java-Concise-O(nm)-time
-    */
+  // @see https://leetcode.com/problems/reshape-the-matrix/discuss/102491/Java-Concise-O(nm)-time
   def matrixReshape(nums: Array[Array[Int]], r: Int, c: Int): Array[Array[Int]] = {
     val (row, col) = (nums.length, nums.head.length)
     if (row * col != r * c) return nums

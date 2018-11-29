@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0001_TwoSum {
 
-  /**
-    * @see https://leetcode.com/problems/two-sum/description/
-    */
+  // @see https://leetcode.com/problems/two-sum/description/
   def twoSum(nums: Array[Int], target: Int): Array[Int] = {
     import scala.collection.mutable
     val leftMap = mutable.Map[Int, Int]()

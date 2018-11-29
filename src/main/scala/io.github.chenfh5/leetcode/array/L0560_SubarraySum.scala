@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0560_SubarraySum {
 
-  /**
-    * @see https://leetcode.com/problems/subarray-sum-equals-k/discuss/134689/Three-Approaches-With-Explanation
-    */
+  // @see https://leetcode.com/problems/subarray-sum-equals-k/discuss/134689/Three-Approaches-With-Explanation
   def subarraySum(nums: Array[Int], k: Int): Int = {
     var (count, sum) = (0, 0)
     val preSumFreq = scala.collection.mutable.Map[Int, Int]()

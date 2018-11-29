@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0064_MinPathSum {
 
-  /**
-    * @see https://leetcode.com/problems/minimum-path-sum/discuss/23647/My-8-lines-simple-solution
-    */
+  // @see https://leetcode.com/problems/minimum-path-sum/discuss/23647/My-8-lines-simple-solution
   def minPathSum(grid: Array[Array[Int]]): Int = {
     if (grid == null || grid.length < 1 || grid.head.length < 1) return 0
 

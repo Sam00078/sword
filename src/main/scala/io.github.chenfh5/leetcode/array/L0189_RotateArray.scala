@@ -2,10 +2,8 @@ package io.github.chenfh5.leetcode.array
 
 object L0189_RotateArray {
 
-  /**
-    * @see https://leetcode.com/submissions/detail/167532194/
-    *      https://leetcode.com/problems/rotate-array/discuss/54250/Easy-to-read-Java-solution
-    */
+  // @see https://leetcode.com/submissions/detail/167532194/
+  //      https://leetcode.com/problems/rotate-array/discuss/54250/Easy-to-read-Java-solution
   def rotate(nums: Array[Int], k: Int): Unit = {
     nums match {
       case _ if nums == null || nums.length < 1 =>

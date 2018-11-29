@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0167_TwoSum2 {
 
-  /**
-    * @see https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/discuss/51239/Share-my-java-AC-solution.
-    */
+  // @see https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/discuss/51239/Share-my-java-AC-solution.
   def twoSum(numbers: Array[Int], target: Int): Array[Int] = {
     val oriArr = Array(0, 0)
     if (numbers == null || numbers.length < 2) return oriArr

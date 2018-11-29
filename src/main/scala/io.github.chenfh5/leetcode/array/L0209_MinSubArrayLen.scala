@@ -2,10 +2,8 @@ package io.github.chenfh5.leetcode.array
 
 object L0209_MinSubArrayLen {
 
-  /**
-    * @see https://leetcode.com/submissions/detail/167535432/
-    *      https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59078/Accepted-clean-Java-O(n)-solution-(two-pointers)
-    */
+  // @see https://leetcode.com/submissions/detail/167535432/
+  //      https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59078/Accepted-clean-Java-O(n)-solution-(two-pointers)
   def minSubArrayLen(s: Int, nums: Array[Int]): Int = {
     nums match {
       case _ if nums == null || nums.length < 1 => 0

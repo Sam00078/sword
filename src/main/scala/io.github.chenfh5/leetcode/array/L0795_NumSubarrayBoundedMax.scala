@@ -9,7 +9,7 @@ object L0795_NumSubarrayBoundedMax {
       // the max of subArray between [L,R]
       if (A(i) > R) left = i // left is track by >R
       if (A(i) >= L) right = i // right is track by >=L
-      res += right - left // every loop if A(i) smaller, but right > left, then append to the subArray
+      res += (right - left) // every loop if A(i) smaller, but right > left, then append to the subArray
     }
     res
   }

@@ -2,10 +2,8 @@ package io.github.chenfh5.leetcode.array
 
 object L0287_FindDuplicate {
 
-  /**
-    * @see https://leetcode.com/problems/find-the-duplicate-number/discuss/72844/Two-Solutions-(with-explanation):-O(nlog(n))-and-O(n)-time-O(1)-space-without-changing-the-input-array
-    *      binary search
-    */
+  // @see https://leetcode.com/problems/find-the-duplicate-number/discuss/72844/Two-Solutions-(with-explanation):-O(nlog(n))-and-O(n)-time-O(1)-space-without-changing-the-input-array
+  //      binary search
   def findDuplicate(nums: Array[Int]): Int = {
     nums match {
       case _ if nums == null || nums.length < 2 => 1

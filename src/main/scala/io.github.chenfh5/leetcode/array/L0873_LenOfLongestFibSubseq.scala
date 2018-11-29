@@ -7,6 +7,7 @@ object L0873_LenOfLongestFibSubseq {
     val set = A.toSet // convert whole already
     var res = 2
     for (i <- 0 until A.length) {
+      // double loop to avoid only head element to be consider
       for (j <- i + 1 until A.length) {
         var (f1, f2, curLen) = (A(i), A(j), 2)
         while (set.contains(f1 + f2)) {

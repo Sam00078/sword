@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0268_MissingNumber {
 
-  /**
-    * @see https://leetcode.com/problems/missing-number/discuss/69791/4-Line-Simple-Java-Bit-Manipulate-Solution-with-Explaination
-    */
+  // @see https://leetcode.com/problems/missing-number/discuss/69791/4-Line-Simple-Java-Bit-Manipulate-Solution-with-Explaination
   def missingNumber(nums: Array[Int]): Int = {
     var res = nums.length // input is 0~N, then res=N, since for-loop without N, only N-1 is the max
     for (i <- 0 until nums.length) {

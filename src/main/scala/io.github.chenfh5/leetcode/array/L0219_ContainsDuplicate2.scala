@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0219_ContainsDuplicate2 {
 
-  /**
-    * @see https://leetcode.com/problems/contains-duplicate-ii/discuss/61372/Simple-Java-solution
-    */
+  // @see https://leetcode.com/problems/contains-duplicate-ii/discuss/61372/Simple-Java-solution
   def containsNearbyDuplicate(nums: Array[Int], k: Int): Boolean = {
     val set = scala.collection.mutable.Set[Int]()
     for (i <- 0 until nums.length) {

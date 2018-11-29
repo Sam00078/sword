@@ -2,10 +2,8 @@ package io.github.chenfh5.leetcode.array
 
 object L0169_MajorityElement {
 
-  /**
-    * @see https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution
-    *      https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution/127325
-    */
+  // @see https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution
+  //      https://leetcode.com/problems/majority-element/discuss/51613/O(n)-time-O(1)-space-fastest-solution/127325
   def majorityElement(nums: Array[Int]): Int = {
     var (major, count) = (nums.head, 1)
     // major will not be changed once it has been found, since more than n/2 elements are major elements

@@ -6,6 +6,7 @@ object L0674_FindLengthOfLCIS {
   def findLengthOfLCIS(nums: Array[Int]): Int = {
     var (res, count) = (0, 0)
     for (i <- 0 until nums.length) {
+      // here is continuous
       if (i == 0 || nums(i - 1) < nums(i)) {
         count += 1
         res = math.max(res, count)

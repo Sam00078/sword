@@ -2,9 +2,7 @@ package io.github.chenfh5.leetcode.array
 
 object L0581_FindUnsortedSubarray {
 
-  /**
-    * @see https://leetcode.com/problems/shortest-unsorted-continuous-subarray/discuss/103057/Java-O(n)-Time-O(1)-Space
-    */
+  // @see https://leetcode.com/problems/shortest-unsorted-continuous-subarray/discuss/103057/Java-O(n)-Time-O(1)-Space
   def findUnsortedSubarray(nums: Array[Int]): Int = {
     var (len, begin, end, leftMin, rightMax) = (nums.length, 1, 0, nums.last, nums.head)
     // 遍历所有直到分别找到左侧的最小和右侧的最大.
