@@ -6,7 +6,7 @@ object L0696_CountBinarySubstrings {
   def countBinarySubstrings(s: String): Int = {
     if (s == null || s.length == 0) return 0
 
-    // preRun count the same item happend before
+    // preRun count the same item happened before
     // curRun count the current number of items
     var (preRun, curRun, res) = (0, 1, 0)
     for (i <- 1 until s.length) {

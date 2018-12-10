@@ -12,7 +12,7 @@ object L0788_RotatedDigits {
   }
 
   def isValid(_N: Int): Boolean = {
-    // valud if N contains at least one `1,5,6,9` and no contains `3,4 or 7`
+    // valud if N contains at least one `2,5,6,9` and no contains `3,4 or 7`
     var N = _N
     var validFound = false
     while (N > 0) {

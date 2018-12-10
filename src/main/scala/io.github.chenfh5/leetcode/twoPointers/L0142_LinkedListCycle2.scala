@@ -16,7 +16,7 @@ object L0142_LinkedListCycle2 {
         // there is a cycle
         while (slow != entry) {
           // slow distance = a + b, fast distance = a + b + c + b => a=c
-          // if it is a cycle, there always a entry
+          // if it is a cycle, there always an entry
           // found the entry location
           slow = slow.next
           entry = entry.next

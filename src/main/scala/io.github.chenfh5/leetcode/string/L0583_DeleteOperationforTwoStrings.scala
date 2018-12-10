@@ -2,7 +2,6 @@ package io.github.chenfh5.leetcode.string
 
 object L0583_DeleteOperationforTwoStrings {
 
-
   // @see https://leetcode.com/problems/delete-operation-for-two-strings/discuss/103214/Java-DP-Solution-(Longest-Common-Subsequence)
   def minDistance(word1: String, word2: String): Int = {
     val (len1, len2) = (word1.length, word2.length)

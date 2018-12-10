@@ -14,7 +14,7 @@ object L0524_FindLongestWord {
     res
   }
 
-  // check is word is the subseq of str
+  // check the word is the subseq of str
   @inline
   def isSubseqOfStr(word: String, str: String): Boolean = {
     var (i, j) = (0, 0)

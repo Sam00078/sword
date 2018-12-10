@@ -32,7 +32,7 @@ object L0522_LongestUncommonSubsequence {
   def isSubsequence(s1: String, s2: String): Boolean = {
     var i, j = 0
     while (i < s1.length && j < s2.length) {
-      if (s1(i) == s2(j)) i += 1
+      if (s1(i) == s2(j)) i += 1 // no need to be consecutive
       j += 1
     }
     i == s1.length
@@ -42,8 +42,9 @@ object L0522_LongestUncommonSubsequence {
     val input = Array("aba", "cdc", "eae")
     val res = findLUSlength(input)
     println(res)
-    assert(isSubsequence("ac", "abc")) // s1 is the subseq of abc
     assert(res == 3)
+
+    assert(isSubsequence("ac", "abc")) // s1 is the subseq of abc
   }
 
 }

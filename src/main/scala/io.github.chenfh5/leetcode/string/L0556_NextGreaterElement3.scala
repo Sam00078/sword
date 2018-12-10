@@ -6,7 +6,7 @@ object L0556_NextGreaterElement3 {
 
   // @see https://leetcode.com/problems/next-greater-element-iii/discuss/101834/Java(5ms)-Find-Swap-Sort-Solution
   def nextGreaterElement(n: Int): Int = {
-    var num = n.toString.toCharArray
+    val num = n.toString.toCharArray
     // to find the min greater, from righ to left, find the first right < left, and mark the pos
     for (i <- Range(num.length - 2, 0, -1).inclusive) {
       var minPoi = i

@@ -30,6 +30,7 @@ object L0809_ExpressiveWords {
     val words = Array("hello", "hi", "helo")
     val res = expressiveWords(S, words)
     print(res)
+    assert(res == 1)
   }
 
 }

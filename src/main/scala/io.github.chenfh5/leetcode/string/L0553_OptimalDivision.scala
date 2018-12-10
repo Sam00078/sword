@@ -22,6 +22,7 @@ object L0553_OptimalDivision {
     val nums = Array(1000, 100, 10, 2)
     val res = optimalDivision(nums)
     print(res)
+    assert(res == "1000/(100/10/2)")
   }
 
 }

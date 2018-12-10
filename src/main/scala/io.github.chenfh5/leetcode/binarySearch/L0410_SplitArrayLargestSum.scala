@@ -2,7 +2,7 @@ package io.github.chenfh5.leetcode.binarySearch
 
 object L0410_SplitArrayLargestSum {
 
-  // @see https://leetcode.com/problems/split-array-largxest-sum/discuss/89817/Clear-Explanation:-8ms-Binary-Search-Java
+  // @see https://leetcode.com/problems/split-array-largest-sum/discuss/89817/Clear-Explanation:-8ms-Binary-Search-Java
   def splitArray(nums: Array[Int], m: Int): Int = {
     var (max, sum) = (0, 0)
     for (num <- nums) {

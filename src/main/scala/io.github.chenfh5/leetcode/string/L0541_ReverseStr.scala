@@ -19,7 +19,7 @@ object L0541_ReverseStr {
         reverseLeftPos += 1
         reverseRightPos -= 1
       }
-      reverseLeftPos = nextLeft
+      reverseLeftPos = nextLeft // skip
     }
     arr.mkString
   }

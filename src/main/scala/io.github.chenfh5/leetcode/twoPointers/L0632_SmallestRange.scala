@@ -9,7 +9,7 @@ object L0632_SmallestRange {
       def compare(a: Array[Int], b: Array[Int]) = b.head compare a.head
     }
 
-    // Maintain a queue that have exact one element from each array.
+    // Maintain a queue that have exact one element from each array
     val pq = new scala.collection.mutable.PriorityQueue[Array[Int]]()(arrOrd)
     var (start, end, max) = (0, Int.MaxValue, Int.MinValue)
     for (i <- 0 until nums.size) {

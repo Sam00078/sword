@@ -4,7 +4,6 @@ import scala.collection.mutable.ListBuffer
 
 object L0816_AmbiguousCoordinates {
 
-
   // @see https://leetcode.com/problems/ambiguous-coordinates/discuss/123851/C++JavaPython-Solution-with-Explanation
   def ambiguousCoordinates(S: String): List[String] = {
     val n = S.length
@@ -37,6 +36,8 @@ object L0816_AmbiguousCoordinates {
     val input = "(0123)"
     val res = ambiguousCoordinates(input)
     print(res)
+    val expect = List("(0, 123)", "(0, 1.23)", "(0, 12.3)", "(0.1, 23)", "(0.1, 2.3)", "(0.12, 3)")
+    assert(res == expect)
   }
 
 }

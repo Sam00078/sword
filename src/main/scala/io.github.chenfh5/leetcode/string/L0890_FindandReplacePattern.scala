@@ -29,9 +29,9 @@ object L0890_FindandReplacePattern {
     val words = Array("abc", "deq", "mee", "aqq", "dkd", "ccc")
     val pattern = "abb"
     val res = findAndReplacePattern(words, pattern)
-    val expect = Array("mee", "aqq")
+    val expect = List("mee", "aqq")
     print(res)
-    assert(res sameElements expect)
+    assert(res == expect)
   }
 
 }

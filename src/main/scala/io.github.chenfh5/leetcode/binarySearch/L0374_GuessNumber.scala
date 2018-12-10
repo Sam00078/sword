@@ -3,6 +3,7 @@ package io.github.chenfh5.leetcode.binarySearch
 object L0374_GuessNumber {
 
   // @see https://leetcode.com/problems/guess-number-higher-or-lower/discuss/84668/Short-Java-code-using-binary-search
+  // TODO
   def guessNumber(n: Int): Int = {
     var (i, j) = (0, n)
     while (i < j) {
